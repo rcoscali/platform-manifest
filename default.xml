@@ -2,25 +2,43 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com/"
+           fetch="https://android.googlesource.com/a/"
            review="https://android-review.googlesource.com/" />
   <remote  name="boundary-linode"
 	   fetch="ssh://git@linode.boundarydevices.com/boundary-imx-android-r13.4/" />
   <remote  name="boundary-github"
            fetch="git://github.com/boundarydevices/" />
+  <remote  name="nagra-github"
+           fetch="https://github.com/rcoscali/vendor-nagravision"
+           push="https://github.com/rcoscali/vendor-nagravision" />
   <default revision="refs/tags/android-4.2.2_r1"
            remote="aosp"
            sync-j="4" />
 
-  <!-- Boundary Devices kernel and U-Boot -->
+  <!-- 
+       ==============================================================================================
+       NagraVision demo Drm plugin
+  -->
+  <project path="vendor/nagravision" name="nagravision" remote="nagra-github" />
+
+  <!-- 
+       ==============================================================================================
+       Boundary Devices kernel and U-Boot 
+  -->
   <project path="kernel_imx" name="linux-imx6" revision="boundary-jb4.2.2" remote="boundary-github" />
   <project path="bootable/bootloader/uboot-imx" name="u-boot-imx6" revision="staging" remote="boundary-github" />
   <project path="device/boundary" name="android_device_boundary" remote="boundary-github" revision="boundary-imx_jb4.2.2_1.0.0-ga" />
 
-  <!-- Boundary Devices open source -->
+  <!-- 
+       ==============================================================================================
+       Boundary Devices open source 
+  -->
   <project path="external/devregs" name="devregs" revision="master" remote="boundary-github" />
 
-  <!-- Freescale proprietary -->
+  <!-- 
+       ==============================================================================================
+       Freescale proprietary 
+  -->
   <project path="device/fsl" name="device/fsl" remote="boundary-linode" revision="boundary-imx_jb4.2.2_1.0.0-ga" />
   <project path="device/fsl-proprietary" name="fsl-proprietary" remote="boundary-linode" revision="imx_jb4.2.2_1.0.0-ga" />
   <project path="hardware/imx" name="hardware-imx" remote="boundary-linode" revision="boundary-imx_jb4.2.2_1.0.0-ga" />
@@ -29,12 +47,18 @@
   <project path="external/fsl_imx_omx" name="fsl_imx_omx" remote="boundary-linode" revision="imx_jb4.2.2_1.0.0-ga" />
   <!-- ??? project path="external/fsl_aacp_dec" name="fsl_aacp_dec" remote="boundary-linode" revision="imx_r13.4-ga" -->
 
-  <!-- Freescale additions, open source -->
+  <!-- 
+       ==============================================================================================
+       Freescale additions, open source 
+  -->
   <project path="external/linux-lib" name="android_external_linux-lib" remote="boundary-github" revision="imx_jb4.2.2_1.0.0-ga" />
   <project path="external/busybox" name="android-busybox" remote="boundary-github" revision="imx_jb4.2.2_1.0.0-ga" />
   <project path="external/powerdebug" name="powerdebug" remote="boundary-github" revision="imx_jb4.2.2_1.0.0-ga" />
 
-  <!-- Freescale updates to AOSP -->
+  <!-- 
+       ==============================================================================================
+       Freescale updates to AOSP 
+  -->
   <project path="build" name="android_build" remote="boundary-github" revision="imx_jb4.2.2_1.0.0-ga" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
@@ -59,7 +83,10 @@
   <project path="packages/apps/Settings" name="android_packages_apps_settings" remote="boundary-github" revision="imx_jb4.2.2_1.0.0-ga" />
   <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME" />
 
-  <!-- AOSP -->
+  <!-- 
+       ==============================================================================================
+       AOSP
+  -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" remote="aosp" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" remote="aosp" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" remote="aosp" />
@@ -204,7 +231,9 @@
   <project path="external/oprofile" name="platform/external/oprofile" remote="aosp" />
   <project path="external/ping" name="platform/external/ping" remote="aosp" />
   <project path="external/ping6" name="platform/external/ping6" remote="aosp" />
+<!--
   <project path="external/ppp" name="platform/external/ppp" remote="aosp" />
+-->
   <project path="external/proguard" name="platform/external/proguard" groups="pdk-java" remote="aosp" />
   <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" remote="aosp" />
   <project path="external/qemu" name="platform/external/qemu" remote="aosp" />
@@ -259,7 +288,9 @@
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" remote="aosp" />
   <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" remote="aosp" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" remote="aosp" />
+<!--
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" remote="aosp" />
+-->
   <project path="frameworks/support" name="platform/frameworks/support" remote="aosp" />
   <project path="frameworks/testing" name="platform/frameworks/testing" remote="aosp" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" remote="aosp" />
