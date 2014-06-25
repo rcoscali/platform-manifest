@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com/"
+           fetch="https://android.googlesource.com/a/"
            review="https://android-review.googlesource.com/" />
   <remote  name="boundary-linode"
 	   fetch="ssh://git@linode.boundarydevices.com/boundary-imx-android-r13.4/" />
@@ -10,9 +10,19 @@
            fetch="git://github.com/boundarydevices/" />
   <remote  name="github"
            fetch="git://github.com/" />
+  <remote  name="nagra-github"
+           fetch="ssh://git@192.30.252.131/rcoscali/"
+           push="ssh://git@192.30.252.131/rcoscali/" />
   <default revision="refs/tags/android-4.3_r2.1"
            remote="aosp"
            sync-j="4" />
+
+  <!-- 
+       ==============================================================================================
+       NagraVision demo Drm plugin
+  -->
+  <project path="vendor/nagravision" name="vendor-nagravision" remote="nagra-github" revision="master" />
+
 
   <!-- Boundary Devices kernel and U-Boot -->
   <project path="kernel_imx" name="linux-imx6" revision="boundary-jb4.3_1.0.0-ga" remote="boundary-github" />
