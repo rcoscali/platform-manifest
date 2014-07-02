@@ -66,7 +66,7 @@
   <project path="external/ppp" name="android_external_ppp" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="external/skia" name="skia" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="external/tinyalsa" name="tinyalsa" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
-  <project path="frameworks/av" name="frameworks_av" remote="nagra-github" revision="imx_jb4.3_1.0.0-ga-1" />
+  <project path="frameworks/av" name="frameworks_av" remote="nagra-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="frameworks/base" name="android_frameworks_base" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="frameworks/native" name="frameworks_native" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="frameworks/rs" name="frameworks_rs" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
