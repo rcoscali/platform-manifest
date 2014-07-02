@@ -11,8 +11,8 @@
   <remote  name="github"
            fetch="git://github.com/" />
   <remote  name="nagra-github"
-           fetch="ssh://git@192.30.252.131/rcoscali/"
-           push="ssh://git@192.30.252.131/rcoscali/" />
+           fetch="ssh://git@github.com/rcoscali/"
+           push="ssh://git@github.com/rcoscali/" />
   <default revision="refs/tags/android-4.3_r2.1"
            remote="aosp"
            sync-j="4" />
