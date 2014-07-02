@@ -7,12 +7,12 @@
   <remote  name="boundary-linode"
 	   fetch="ssh://git@linode.boundarydevices.com/boundary-imx-android-r13.4/" />
   <remote  name="boundary-github"
-           fetch="git://github.com/boundarydevices/" />
+           fetch="ssh://git@github.com/boundarydevices/" />
   <remote  name="github"
-           fetch="git://github.com/" />
+           fetch="https://github.com/" />
   <remote  name="nagra-github"
-           fetch="ssh://git@github.com/rcoscali/"
-           push="ssh://git@github.com/rcoscali/" />
+           fetch="ssh://git@github.com:rcoscali/"
+           push="ssh://git@github.com:rcoscali/" />
   <default revision="refs/tags/android-4.3_r2.1"
            remote="aosp"
            sync-j="4" />
@@ -33,12 +33,12 @@
 
   <!-- Boundary Devices updates to other components -->
   <project path="device/fsl" name="device/fsl" remote="boundary-linode" revision="tiwi-bluetooth" />
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="boundary-github" revision="boundary-imx_jb4.3_1.0.0-ga" />
+  <project path="external/wpa_supplicant_8" name="external-wpa_supplicant_8" remote="nagra-github" revision="boundary-imx_jb4.3_1.0.0-ga" />
   <project path="hardware/imx" name="hardware-imx" remote="boundary-linode" revision="boundary-imx_jb4.3_1.0.0-ga" />
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="boundary-github" revision="boundary-imx_jb4.3_1.0.0-ga" />
   <project path="hardware/ti/wpan" name="hardware/ti/wpan" remote="boundary-linode" revision="boundary-imx_jb4.3_1.0.0-ga" />
   <project path="system/core" name="android_system_core" remote="boundary-github" revision="boundary-imx_jb4.3_1.0.0-ga" />
-  <project path="build" name="android_build" remote="nagra-github" revision="boundary-imx_jb4.3_1.0.0-ga" groups="pdk" >
+  <project path="build" name="build" remote="nagra-github" revision="boundary-imx_jb4.3_1.0.0-ga" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -56,7 +56,7 @@
   <project path="external/mtd-utils" name="android_external_mtd-utils" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="external/ntfs-3g" name="ntfs-3g" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="external/powerdebug" name="powerdebug" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
-  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="nagra-github" revision="imx_jb4.3_1.0.0-ga" />
+  <project path="hardware/qcom/wlan" name="hardware-qcom-wlan" remote="nagra-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="hardware/realtek" name="android_hardware_realtek" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="packages/apps/fsl_imx_demo" name="fsl_imx_demo" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
 
@@ -66,7 +66,7 @@
   <project path="external/ppp" name="android_external_ppp" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="external/skia" name="skia" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="external/tinyalsa" name="tinyalsa" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
-  <project path="frameworks/av" name="frameworks_av" remote="nagra-github" revision="imx_jb4.3_1.0.0-ga" />
+  <project path="frameworks/av" name="frameworks-av" remote="nagra-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="frameworks/base" name="android_frameworks_base" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="frameworks/native" name="frameworks_native" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
   <project path="frameworks/rs" name="frameworks_rs" remote="boundary-github" revision="imx_jb4.3_1.0.0-ga" />
